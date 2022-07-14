@@ -14,7 +14,6 @@ class SearchIn2DMatrix {
 
         for (int i = 0; i < row; i++) {
             int a = 0;
-            int b = col;
             if (mat[i][a] <= search && mat[i][col - 1] > search) {
                 for (int j = 0; j < col; j++) {
                     if (mat[i][j] == search) {
