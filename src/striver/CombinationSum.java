@@ -13,6 +13,8 @@ public class CombinationSum {
         System.out.print(result);
     }
 
+    // In this program we have to find the elements which
+    // sum equal to the target but we can use each index only one time.
     private static void findSum(List<List<Integer>> result, List<Integer> list, int[] arr, int target, int i) {
         if (i >= arr.length) {
             if (target == 0) {

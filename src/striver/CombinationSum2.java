@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.List;
 
 public class CombinationSum2 {
+
     public static void main(String[] args) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> list = new ArrayList<Integer>();
@@ -13,6 +14,8 @@ public class CombinationSum2 {
         System.out.print(result);
     }
 
+    // In this program we have to find the elements which
+    // sum equal to the target but we can use each index only one time.
     private static void findSum(List<List<Integer>> result, List<Integer> list, int[] arr, int target, int i) {
         if (i >= arr.length) {
             if (target == 0) {
