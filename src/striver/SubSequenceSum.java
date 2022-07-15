@@ -18,6 +18,7 @@ class SubSequenceSum {
     private static void findSumValue(int index, int[] arr, ArrayList<Integer> list, int sum) {
         if (index >= arr.length) {
             if (sum == 0) {
+
                 result.add(new ArrayList<Integer>(list));
             }
             return;
