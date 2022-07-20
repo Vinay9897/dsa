@@ -1,6 +1,11 @@
 package dsaQuestion;
 
 public class SearchEle_In_RotatedArr {
+
+    /*
+     * in the program we hava array elements and target (which we have to found)+
+     * ;
+     */
     public static int search(int[] nums, int target) {
         if (nums.length == 1)
             if (target == 0)
