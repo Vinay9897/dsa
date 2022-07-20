@@ -32,7 +32,8 @@ public class NoOfMatchingSubsequence {
                 }
             }
             if (j == temp.length)
-                count++;
+                // there may be a possiblity of duplicate string occurence
+                count += map.get(str);
         }
         return count;
 
