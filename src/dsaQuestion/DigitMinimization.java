@@ -30,5 +30,6 @@ public class DigitMinimization {
         Integer temp = list.get(i);
         list.set(i, list.get(j));
         list.set(j, temp);
+
     }
 }
