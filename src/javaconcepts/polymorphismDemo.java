@@ -9,16 +9,19 @@ public class polymorphismDemo {
         // s -------- REFERENCE_NAME -- which is refering the object in heap memory
         // new Shape() --- it is used to allocate the memory( in the heap ) to the
         // reference (s)
+
         Shape s = new Shape();
         // Access the function using object
         s.draw();
 
         // method overriding
 
-        s = new Rectangle(); // Rectangle class overriding the property of the parent class
+        s = new Rectangle(); // Rectangle class overriding the property of the parent
+
         s.draw();
 
-        s = new Triangle(); // Triangle class overriding the property of the parent class
+        s = new Triangle(); // Triangle class overriding the property of the parent
+
         s.draw();
 
         s = new Square();

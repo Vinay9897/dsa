@@ -23,7 +23,7 @@ public class AvtoBus {
             }
 
             test--;
+            sc.close();
         }
-        sc.close();
     }
 }
