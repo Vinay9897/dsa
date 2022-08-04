@@ -18,9 +18,11 @@ public class Parenthesis {
             return;
         }
         if (open < n) {
+            // System.out.println(sb);
             parenthesisFunction(n, list, open + 1, close, sb + "(");
         }
         if (close < open) {
+            // System.out.println(sb);
             parenthesisFunction(n, list, open, close + 1, sb + ")");
         }
     }
