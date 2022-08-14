@@ -14,45 +14,23 @@ package dsaQuestion;
 
 public class ConstructSmallestNo {
     public static void main(String[] args) {
-        String pattern = "DDDD ";
+        String pattern = "DDDD";
         helper(pattern);
     }
 
     public static void helper(String pattern) {
-        int i = 0;
-        int s = 0;
-        String str = "";
-        int flag = 0;
-        while (i < pattern.length() - 1) {
-            if (flag == 0) {
-                s = i;
+        StringBuilder str = new StringBuilder(), helString = new StringBuilder();
+        for (int i = 0; i <= pattern.length(); i++) {
+            helString.append((char) ('1' + i));
+            // reverse the helString only when
+            // i== pattern.length()
+            // or, patter[i] == 'I'
+            if (i == pattern.length() || pattern.charAt(i) == 'I') {
+                str.append(helString.reverse());
+                // empty the helper String
+                helString = new StringBuilder();
             }
-            flag = 1;
-            // for "I"
-            if (pattern.charAt(i) == 'I' && pattern.charAt(i + 1) == 'I') {
-
-            } else {
-                if (pattern.charAt(i) != 'D') {
-                    for (int s1 = s + 1; s1 <= i + 1; s1++) {
-                        str += s1;
-                    }
-                    flag = 0;
-                }
-            }
-
-            // for "D"
-            if (pattern.charAt(i) == 'D' && pattern.charAt(i + 1) == 'D') {
-
-            } else {
-                if (pattern.charAt(i) != 'I') {
-                    for (int s1 = i + 2; s1 > s + 1; s1--) {
-                        str += s1;
-                    }
-                    flag = 0;
-                }
-            }
-            i++;
         }
-        System.out.println(str);
+        System.out.println(str.toString());
     }
 }
