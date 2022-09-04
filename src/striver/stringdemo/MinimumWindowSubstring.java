@@ -31,10 +31,10 @@ public class MinimumWindowSubstring {
             boolean flag2 = false;
 
             // acquire
-            while (i < t.length() - 2 && matchcount < desire_mc) {
+            while (i < t.length() - 1 && matchcount < desire_mc) {
                 i++;
                 char ch = t.charAt(i);
-                if (map1.getOrDefault(ch, 0) <= map2.getOrDefault(ch, 0)) {
+                if ((map2.containsKey(ch) && map1.get(ch).intValue() <= map2.get(ch).intValue())) {
                     matchcount++;
                 }
                 flag1 = true;
@@ -46,13 +46,12 @@ public class MinimumWindowSubstring {
                     ans = potentialAns;
                 }
                 j++; // releasing character from starting
-                char ch = t.charAt(i);
+                char ch = t.charAt(j);
                 if (map1.get(ch) == 1) {
                     map1.remove(ch);
                 } else
                     map1.put(ch, map1.get(ch) - 1);
-
-                if (map1.getOrDefault(ch, 0) < map2.getOrDefault(ch, 0)) {
+                if (map1.containsKey(ch) && map1.get(ch).intValue() < map2.get(ch).intValue()) {
                     matchcount--;
                 }
                 flag2 = true;
