@@ -18,7 +18,9 @@ public class Permutation {
         }
         for (int index = 0; index < arr.length; index++) {
             if (!visited[index]) {
+                // add in list
                 list.add(arr[index]);
+                // mark visited
                 visited[index] = true;
                 findPermutation(result, list, arr, visited);
                 list.remove(list.size() - 1);

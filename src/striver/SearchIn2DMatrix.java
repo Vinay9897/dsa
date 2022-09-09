@@ -1,11 +1,17 @@
 package striver;
 
 class SearchIn2DMatrix {
+
+    // Search th element in the sorted 2D matrix
+    // return true if found else false
     public static void main(String[] args) {
-        int[][] mat = { { 1, 3, 5, 7 }, { 8, 10, 12, 14 }, { 16, 18, 20, 22 } };
+        int[][] mat = {
+                { 1, 3, 5, 7 },
+                { 8, 10, 12, 14 },
+                { 16, 18, 20, 22 } };
         int row = mat.length;
         int col = mat[0].length;
-        int search = 15;
+        int search = 18;
         boolean response = find(mat, row, col, search);
         System.out.println(response);
     }

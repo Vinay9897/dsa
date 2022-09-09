@@ -32,17 +32,18 @@ public class SubSet2 {
     public static void main(String[] args) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> list = new ArrayList<>();
-        int[] arr = { 1, 2, 2 };
+        int[] arr = { 1, 2, 2, 3 };
         findSubSet(result, list, arr, 0);
         System.out.println(result);
     }
 
     private static void findSubSet(List<List<Integer>> result, List<Integer> list, int[] arr, int index) {
         result.add(new ArrayList<>(list));
-        for (int i = index; i < arr.length - 1; i++) {
+        for (int i = index; i < arr.length; i++) {
             if (i != index && arr[i] == arr[i - 1])
                 continue;
             list.add(arr[i]);
+            System.out.println(list);
             findSubSet(result, list, arr, i + 1);
             list.remove(list.size() - 1);
         }

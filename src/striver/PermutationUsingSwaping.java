@@ -21,6 +21,7 @@ public class PermutationUsingSwaping {
             System.out.println(list);
             return;
         }
+
         for (int i = index; i < arr.length; i++) {
             swap(arr, i, index);
             findPermutation(result, list, arr, index + 1);

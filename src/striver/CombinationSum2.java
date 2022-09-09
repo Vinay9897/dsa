@@ -9,7 +9,7 @@ public class CombinationSum2 {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> list = new ArrayList<Integer>();
         int[] arr = { 2, 3, 5, 6, 7 };
-        int target = 7;
+        int target = 9;
         findSum(result, list, arr, target, 0);
         System.out.print(result);
     }
