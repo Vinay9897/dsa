@@ -17,7 +17,9 @@ public class DialNumber {
 
     private static void helper(String digits, String[] str, ArrayList<String> result, StringBuilder st, int index) {
         String num;
+        // i become 0 after every function call
         int i = 0;
+        // only if index less than digit length
         if (index < digits.length())
             i = Character.getNumericValue(digits.charAt(index));
 
@@ -30,6 +32,7 @@ public class DialNumber {
 
         for (int k = 0; k < num.length(); k++) {
             st.append(num.charAt(k));
+            System.out.print(st.toString() + " ");
             helper(digits, str, result, st, index + 1);
             st.deleteCharAt(st.length() - 1);
         }
