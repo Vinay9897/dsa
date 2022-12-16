@@ -1,3 +1,5 @@
+package striver;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ public class FindSubSequence {
     private static void subsequence(int[] arr, int i, List<Integer> list) {
 
         if (i >= arr.length) {
+
             result.add(new ArrayList<>(list));
             return;
         }

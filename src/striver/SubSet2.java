@@ -43,7 +43,7 @@ public class SubSet2 {
             if (i != index && arr[i] == arr[i - 1])
                 continue;
             list.add(arr[i]);
-            System.out.println(list);
+            // System.out.println(list);
             findSubSet(result, list, arr, i + 1);
             list.remove(list.size() - 1);
         }
